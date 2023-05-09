@@ -43,7 +43,7 @@
               </ul>
             </nav>
             <div class="change_color">
-              <a href="#" onclick="darkMode()"><img src="/images/icons/dark-mode.png" alt=""></a>
+              <a href="#" onclick="darkMode()"><img id="change_theme"src="/images/icons/dark-mode.png" alt=""></a>
             </div>
             <div class="header__btn-box">
               <a class="header__top-btn button" href="#questions">Get consultation</a>
@@ -999,6 +999,7 @@
   function darkMode() {
         var element = document.getElementById("header");
         element.classList.toggle("dark-mode");
+        document.getElementById("change_theme").classList.toggle("dark-mode");
       }
   var myLinks = document.getElementsByClassName("header__nav-link");
 

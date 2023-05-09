@@ -125,7 +125,12 @@ body #header.dark-mode {
 #header.dark-mode{
   background: url("../images/decor/shapes-bg.svg") 50% 50% / cover no-repeat, linear-gradient(56deg, rgba(126, 64, 165, 0.24) 0%, rgba(55, 4, 5, 0.05) 100%);
 }
-
+#change_theme{
+  transition: all .3s;
+}
+#change_theme.dark-mode{
+  content: url("/images/icons/change_theme2.png");
+}
 .header__top-inner {
   display: flex;
   justify-content: space-between;
