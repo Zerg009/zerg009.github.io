@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <rect width="128px" height="128px" fill="#fff"/>
+  <path d="M100,100 L400,100 L400,400 L100,400 Z" fill="#1e1e1e"/>
+  <text x="50%" y="50%" font-size="150" text-anchor="middle" dominant-baseline="middle" fill="#fff">BeatSchool</text>
+  <path d="M150,250 C150,200 200,150 250,150 C300,150 350,200 350,250 C350,300 300,350 250,350 C200,350 150,300 150,250" fill="#fff"/>
+  <circle cx="250" cy="250" r="50" fill="#1e1e1e"/>
+  <circle cx="250" cy="250" r="30" fill="#fff"/>
+  <circle cx="250" cy="250" r="10" fill="#1e1e1e"/>
+  <rect x="210" y="220" width="80" height="20" fill="#fff"/>
+  <rect x="240" y="190" width="20" height="60" fill="#fff"/>
+</svg>
