@@ -27,5 +27,8 @@ $(function () {
       top = $(id).offset().top
     $('body,html').animate({ scrollTop: top }, 800)
   })
-
+  $('.burger').on('click', function(e){
+    e.preventDefault();
+    $('.header__top').toggleClass('header__top--open')
+  })
 })

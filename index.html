@@ -25,19 +25,20 @@
 <body id="body">
   <div class="wrapper">
     <header class="header" id="header">
-      <div class="header__top">
+      <a href="#" class="burger"><span></span></a>
+      <div class="header__top header__top--open">
         <div class="container">
           <div class="header__top-inner">
             <a class="header__logo logo" href="/">
               <img src="/images/logo.svg" alt="Logo">
             </a>
             <nav class="header__nav">
-              <ul class="header__nav-list">
+              <!-- <ul class="header__nav-list">
                 <li class="header__nav-item">
-                  <a href="#about" class="header__nav-link header__nav-link--active">Courses</a>
+                  <a href="#about" class="header__nav-link header__nav-link--active">About us</a>
                 </li>
                 <li class="header__nav-item">
-                  <a href="#directions" class="header__nav-link header__nav-link--active">About us</a>
+                  <a href="#directions" class="header__nav-link header__nav-link--active">Courses</a>
                 </li>
                 <li class="header__nav-item ">
                   <a href="#" class="header__nav-link header__nav-link--active">Events</a>
@@ -48,7 +49,24 @@
                 <li class="header__nav-item">
                   <a href="#info" class="header__nav-link header__nav-link--active">Contacts</a>
                 </li>
-              </ul>
+              </ul> -->
+              <div class="header__nav-list">
+                <div class="header__nav-item">
+                  <a href="#about" class="header__nav-link header__nav-link--active">About us</a>
+                </div>
+                <div class="header__nav-item">
+                  <a href="#directions" class="header__nav-link header__nav-link--active">Courses</a>
+                </div>
+                <div class="header__nav-item ">
+                  <a href="#" class="header__nav-link header__nav-link--active">Events</a>
+                </div>
+                <div class="header__nav-item">
+                  <a href="#" class="header__nav-link header__nav-link--active">Blog</a>
+                </div>
+                <div class="header__nav-item">
+                  <a href="#info" class="header__nav-link header__nav-link--active">Contacts</a>
+                </div>
+              </div>
             </nav>
             <div class="change_color">
               <a href="#" onclick="darkMode()"><img id="change_theme"src="/images/icons/dark-mode.png" alt=""></a>
@@ -1010,13 +1028,14 @@
         document.getElementById("change_theme").classList.toggle("dark-mode");
       }
   var myLinks = document.getElementsByClassName("header__nav-link");
-
+  var myLinksWrapper = document.getElementsByClassName("header__nav-item");
   for (var i = 0; i < myLinks.length; i++) {
     var clickCount = 0;
     // Check if the click count is already stored in localStorage for this button
     if (localStorage.getItem("link" + i + "clickCount")) {
       clickCount = parseInt(localStorage.getItem("link" + i + "clickCount"));
     }
+    myLinksWrapper[i].style.order = clickCount;
     myLinks[i].setAttribute("title", "Clicked: " + clickCount + " times");
     (function(i, clickCount) {
       myLinks[i].addEventListener("click", function() {
